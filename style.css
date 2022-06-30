@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Outfit:wght@100;400;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*utilities*/
+
+.color-primary {
+    color: #FCBA28;
+}
+
+.tx-c {
+    text-align: center;
+}
+
+.ms-auto {
+    margin: 0 auto;
+}
+
+.mv-2 {
+    margin: 2rem 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 1rem;
+}
+
+.container {
+    width: calc(100% - 158px);
+    margin: 25px auto 5px;
+}
+
+.button {
+    padding: 0.5rem 0;
+    border: 1px solid #fff;
+    max-width: 9rem;
+    margin-top: 2rem;
+    position: relative;
+    cursor: pointer;
+    background-color: #000000;
+    transition: 0.5s ease;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    width: 8.5rem;
+    height: 2rem;
+    border-right: 3px solid #FCBA28;
+    border-bottom: 3px solid #FCBA28;
+    top: 15%;
+    left: 6%;
+}
+
+.button:hover {
+    color: #A42CE9;
+    background-color: #FCBA28;
+    font-weight: 900;
+    font-size: 1.1rem;
+    transition: 0.5s ease;
+    transform: scale(0.9);
+}
+
+.button:hover::before {
+    content: none;
+}
+
+.v-line {
+    width: 3px;
+    height: 5rem;
+    display: block;
+    background-color: #1F1F1F;
+}
+
+a:hover {
+    color: #A42CE9;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+
+/*navbar*/
+
+.nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.nav h1 {
+    font-size: 2.2rem;
+    vertical-align: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    padding: 1rem 0;
+}
+
+nav ul li a {
+    padding: 0 1rem;
+    text-align: center;
+    font-weight: 100;
+    color: #FCBA28;
+}
+
+.name:hover {
+    transition: 0.5s ease;
+    color: #A42CE9;
+    cursor: pointer;
+}
+
+
+/*hero section styles*/
+
+.hero-section {
+    height: 65vh;
+    max-width: 68%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-section main {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+main h1,
+main h1 span {
+    font-weight: 900;
+    font-size: 3rem;
+    margin-top: 10%;
+}
+
+main p {
+    max-width: 70%;
+    text-align: center;
+    padding-top: 0.5rem;
+    font-weight: 100;
+}
+
+
+/*about me section */
+
+.about-me p {
+    max-width: 70%;
+    margin: 0 auto;
+    font-weight: 100;
+    padding-bottom: 3rem;
+}
+
+
+/*skills section */
+
+.skills-section {
+    margin-bottom: 2rem;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skill-card {
+    border: 4px solid #1F1F1F;
+    padding: 1rem 0.8rem;
+    max-width: 32%;
+    margin-bottom: 1rem;
+}
+
+.skill-card:hover {
+    border-color: #FCBA28;
+    transition: 0.5s ease;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 900;
+    padding: 0 0 1rem;
+}
+
+.p-header {
+    font-size: 1.2rem;
+}
+
+.p-logo i {
+    font-size: 2rem;
+}
+
+.skill-desc {
+    font-weight: 100;
+    padding: 0 0 1rem;
+}
+
+.skill-desc a:hover {
+    transition: 0.5s ease;
+    color: #A42CE9;
+    cursor: pointer;
+}
+
+
+/*progress and progress bar animation */
+
+.progress {
+    background: rgba(255, 255, 255, 0.1);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    height: 15px;
+    width: 100%;
+}
+
+.progress-value {
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #FCBA28;
+    height: 15px;
+    width: 0;
+}
+
+#one {
+    animation: load1 5s normal forwards;
+}
+
+@keyframes load1 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+#two {
+    animation: load2 5s normal forwards;
+}
+
+@keyframes load2 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+#three {
+    animation: load3 5s normal forwards;
+}
+
+@keyframes load3 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+#four {
+    animation: load4 5s normal forwards;
+}
+
+@keyframes load4 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 20%;
+    }
+}
+
+#five {
+    animation: load5 5s normal forwards;
+}
+
+@keyframes load5 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 10%;
+    }
+}
+
+#six {
+    animation: load6 5s normal forwards;
+}
+
+@keyframes load6 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+
+/*projects and contacts section */
+
+.projects {
+    margin-bottom: 2rem;
+}
+
+.project,
+.contacts ul {
+    list-style-type: none;
+    margin-top: -2rem 0;
+}
+
+.project li,
+.contacts ul li {
+    padding: 0.2rem 0;
+}
+
+.project li a,
+.contacts ul li a p {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.project li span {
+    font-weight: 100;
+}
+
+
+/*contacts section*/
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    max-width: 40%;
+    text-align: right;
+    margin-left: auto;
+    height: 100%;
+    padding: 2.5rem 2rem;
+    background-color: #A42CE9;
+    margin-top: 1.5em;
+}
+
+.copyright p {
+    background-color: transparent;
+    font-weight: 100;
+}
