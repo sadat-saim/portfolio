@@ -41,6 +41,7 @@ html {
 .container {
     width: calc(100% - 158px);
     margin: 25px auto 5px;
+    max-width: 1200px;
 }
 
 .button {
@@ -124,6 +125,10 @@ nav ul li a {
     color: #FCBA28;
 }
 
+nav ul li a:last-child {
+    padding-right: 0;
+}
+
 .name:hover {
     transition: 0.5s ease;
     color: #A42CE9;
@@ -188,6 +193,7 @@ main p {
     padding: 1rem 0.8rem;
     max-width: 32%;
     margin-bottom: 1rem;
+    position: relative;
 }
 
 .skill-card:hover {
@@ -232,7 +238,10 @@ main p {
     position: relative;
     display: flex;
     height: 15px;
-    width: 100%;
+    width: 96%;
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
 }
 
 .progress-value {
@@ -331,7 +340,6 @@ main p {
 .project,
 .contacts ul {
     list-style-type: none;
-    margin-top: -2rem 0;
 }
 
 .project li,
@@ -341,7 +349,7 @@ main p {
 
 .project li a,
 .contacts ul li a p {
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 900;
 }
 
@@ -354,20 +362,38 @@ main p {
 
 .contacts {
     display: flex;
-    justify-content: space-between;
 }
 
-.copyright {
+.footer {
     max-width: 40%;
     text-align: right;
     margin-left: auto;
-    height: 100%;
-    padding: 2.5rem 2rem;
+    height: 90%;
+    padding: 2rem 1rem;
     background-color: #A42CE9;
-    margin-top: 1.5em;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.copyright p {
-    background-color: transparent;
+.footer p {
     font-weight: 100;
+    background-color: transparent;
+}
+
+
+/*scroll progress bar*/
+
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 0%;
+    background: #A42CE9;
+    z-index: 10000;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }

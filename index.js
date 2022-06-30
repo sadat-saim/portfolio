@@ -82,12 +82,17 @@ const cursorDot = ({
 const $ = s => document.querySelector(s)
 
 const cursor = cursorDot({
+    diameter: 80,
+    // border width
+    borderWidth: 1,
+    // border color
+    borderColor: '#A42CE9',
     easing: 4
 })
 
-cursor.over('.nav', {
-    borderColor: 'rgba(255,255,255,.38)'
-})
+// cursor.over('.nav', {
+//     borderColor: 'rgba(255,255,255,.38)'
+// })
 
 cursor.over('.name', {
     scale: 1.4,
@@ -96,7 +101,7 @@ cursor.over('.name', {
 
 cursor.over('.hero-section', {
     scale: 1.4,
-    background: '#fff'
+    background: '#A42CE9'
 })
 
 cursor.over($('.section-title'), {
@@ -111,10 +116,10 @@ cursor.over($('.my-skills'), {
     borderColor: 'transparent'
 })
 
-cursor.over('.about-me p', {
-    borderColor: 'rgba(255,255,255,.38)',
-    background: 'transparent'
-})
+// cursor.over('.about-me p', {
+//     borderColor: 'rgba(255,255,255,.38)',
+//     background: 'transparent'
+// })
 
 cursor.over('.projects', {
     scale: 1.4,
@@ -130,3 +135,14 @@ cursor.over('.copyright', {
     scale: 1.4,
     background: '#fff'
 })
+
+//scroll progress bar
+const scrollProgress = document.getElementById('scroll-progress');
+const height =
+    document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+window.addEventListener('scroll', () => {
+    const scrollTop =
+        document.body.scrollTop || document.documentElement.scrollTop;
+    scrollProgress.style.height = `${(scrollTop / height) * 100}%`;
+});
