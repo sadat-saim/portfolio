@@ -78,9 +78,7 @@ const cursorDot = ({
     return dot
 }
 
-
-const $ = s => document.querySelector(s)
-
+//cursorDot options
 const cursor = cursorDot({
     diameter: 80,
     // border width
@@ -90,59 +88,57 @@ const cursor = cursorDot({
     easing: 4
 })
 
-// cursor.over('.nav', {
-//     borderColor: 'rgba(255,255,255,.38)'
-// })
+let classNames = ['.name', '.section-title',
+    '.my-skills', '.projects',
+    '.contact-heading', '.copyright'
+]
 
-cursor.over('.name', {
-    scale: 1.4,
-    background: '#fff'
-})
+for (let classIndex = 0; classIndex < classNames.length; classIndex++) {
+    cursor.over(classNames[classIndex], {
+        scale: 1.4,
+        background: '#fff'
+    })
+}
 
 cursor.over('.hero-section', {
     scale: 1.4,
     background: '#A42CE9'
 })
 
-cursor.over($('.section-title'), {
-    scale: 1.4,
-    background: '#fff',
-    borderColor: 'transparent'
-})
-
-cursor.over($('.my-skills'), {
-    scale: 1.4,
-    background: '#fff',
-    borderColor: 'transparent'
-})
-
-// cursor.over('.about-me p', {
-//     borderColor: 'rgba(255,255,255,.38)',
-//     background: 'transparent'
-// })
-
-cursor.over('.projects', {
-    scale: 1.4,
-    background: '#fff'
-})
-
-cursor.over('.contact-heading', {
-    scale: 1.4,
-    background: '#fff'
-})
-
-cursor.over('.copyright', {
-    scale: 1.4,
-    background: '#fff'
-})
-
 //scroll progress bar
-const scrollProgress = document.getElementById('scroll-progress');
-const height =
-    document.documentElement.scrollHeight - document.documentElement.clientHeight;
+const Progress1 = document.getElementById('scroll-progress1');
+const Progress2 = document.getElementById('scroll-progress2');
 
-window.addEventListener('scroll', () => {
-    const scrollTop =
-        document.body.scrollTop || document.documentElement.scrollTop;
-    scrollProgress.style.height = `${(scrollTop / height) * 100}%`;
-});
+function scrollProgress(progress) {
+
+    const height =
+        document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    window.addEventListener('scroll', () => {
+        const scrollTop =
+            document.body.scrollTop || document.documentElement.scrollTop;
+        progress.style.height = `calc(${(scrollTop / height) * 100}%)`;
+    });
+
+}
+
+scrollProgress(Progress1)
+scrollProgress(Progress2)
+
+//skills section animation
+//getBoundingClientRect not work with getElementByClassName
+//intersection obserber api = learn more about it.
+//height is the height of the document
+
+// const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+// const skillSection = document.querySelector('.skills-section');
+// window.addEventListener("scroll", function() {
+//     const elementPosition = skillSection.getBoundingClientRect().top
+//         //position ===0 when reaches top of the element
+//     let position = (2 * (elementPosition / height)).toFixed(2)
+//     console.log(position)
+//     if (position < 0) {
+//         let one = document.getElementById("one")
+
+//     }
+// }, false);

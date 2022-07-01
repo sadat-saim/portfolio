@@ -3,14 +3,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Outfit', cursive, sans-serif;
     font-size: 24px;
-    background-color: #000000;
     color: #FFFFFF;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000000;
 }
 
 
@@ -101,6 +104,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     z-index: 1;
+    background-color: #000000;
 }
 
 .nav h1 {
@@ -138,11 +142,27 @@ nav ul li a:last-child {
 
 /*hero section styles*/
 
+
+/* @keyframes name | duration | easing-function | delay */
+
 .hero-section {
     height: 65vh;
     max-width: 68%;
     text-align: center;
     margin-bottom: 2rem;
+    opacity: 0;
+    animation: slidein 1s ease-in 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+    0% {
+        transform: translateY(10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
 
 .hero-section main {
@@ -252,7 +272,7 @@ main p {
     width: 0;
 }
 
-#one {
+.one {
     animation: load1 5s normal forwards;
 }
 
@@ -265,7 +285,7 @@ main p {
     }
 }
 
-#two {
+.two {
     animation: load2 5s normal forwards;
 }
 
@@ -278,7 +298,7 @@ main p {
     }
 }
 
-#three {
+.three {
     animation: load3 5s normal forwards;
 }
 
@@ -291,7 +311,7 @@ main p {
     }
 }
 
-#four {
+.four {
     animation: load4 5s normal forwards;
 }
 
@@ -304,7 +324,7 @@ main p {
     }
 }
 
-#five {
+.five {
     animation: load5 5s normal forwards;
 }
 
@@ -317,7 +337,7 @@ main p {
     }
 }
 
-#six {
+.six {
     animation: load6 5s normal forwards;
 }
 
@@ -384,10 +404,20 @@ main p {
 
 /*scroll progress bar*/
 
-#scroll-progress {
+#scroll-progress1 {
     position: fixed;
     top: 0;
     right: 0;
+    width: 4px;
+    height: 0%;
+    background: #FCBA28;
+    z-index: 10000;
+}
+
+#scroll-progress2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 4px;
     height: 0%;
     background: #A42CE9;
