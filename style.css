@@ -8,6 +8,11 @@
     color: #FFFFFF;
 }
 
+*::selection {
+    background: #A42CE9;
+    color: #FCBA28;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -18,6 +23,10 @@ body {
 
 
 /*utilities*/
+
+.hidden {
+    opacity: 0;
+}
 
 .color-primary {
     color: #FCBA28;

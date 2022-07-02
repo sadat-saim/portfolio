@@ -78,6 +78,10 @@ const cursorDot = ({
     return dot
 }
 
+//The code above is not mine
+//owner of this code https://github.com/gaoryrt/cursor-dot
+//All codes below are mine
+
 //cursorDot options
 const cursor = cursorDot({
     diameter: 80,
@@ -121,7 +125,6 @@ function scrollProgress(progress) {
     });
 
 }
-
 scrollProgress(Progress1)
 scrollProgress(Progress2)
 
@@ -129,7 +132,6 @@ scrollProgress(Progress2)
 //getBoundingClientRect not work with getElementByClassName
 //intersection obserber api = learn more about it.
 //height is the height of the document
-
 const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
 const skillSection = document.querySelector('.skills-section');
 window.addEventListener("scroll", function() {
@@ -137,7 +139,11 @@ window.addEventListener("scroll", function() {
         //position ===0 when reaches top of the element
     let position = (2 * (elementPosition / height)).toFixed(2)
     console.log(position)
-    if (position < 0) {
-
+    if (position < 0.2) {
+        const classArr = ['one', 'two', 'three', 'four', 'five', 'six']
+        const hidden = document.querySelectorAll(".hidden")
+        hidden.forEach((element, i) => {
+            element.classList.replace("hidden", classArr[i])
+        })
     }
 }, false);
