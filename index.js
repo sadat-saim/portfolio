@@ -116,7 +116,7 @@ const Progress2 = document.getElementById('scroll-progress2');
 function scrollProgress(progress) {
 
     const height =
-        document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        (document.documentElement.scrollHeight - document.documentElement.clientHeight)-20;
 
     window.addEventListener('scroll', () => {
         const scrollTop =

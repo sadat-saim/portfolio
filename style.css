@@ -410,6 +410,10 @@ main p {
     background-color: transparent;
 }
 
+.end{
+    color:rgb(36, 36, 36);
+    font-size: small;
+}
 
 /*scroll progress bar*/
 
