@@ -130,15 +130,14 @@ scrollProgress(Progress2)
 //intersection obserber api = learn more about it.
 //height is the height of the document
 
-// const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
-// const skillSection = document.querySelector('.skills-section');
-// window.addEventListener("scroll", function() {
-//     const elementPosition = skillSection.getBoundingClientRect().top
-//         //position ===0 when reaches top of the element
-//     let position = (2 * (elementPosition / height)).toFixed(2)
-//     console.log(position)
-//     if (position < 0) {
-//         let one = document.getElementById("one")
+const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+const skillSection = document.querySelector('.skills-section');
+window.addEventListener("scroll", function() {
+    const elementPosition = skillSection.getBoundingClientRect().top
+        //position ===0 when reaches top of the element
+    let position = (2 * (elementPosition / height)).toFixed(2)
+    console.log(position)
+    if (position < 0) {
 
-//     }
-// }, false);
+    }
+}, false);
