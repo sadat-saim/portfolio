@@ -10,3 +10,4 @@ if(($selection == "y"))
 then
 git push
 fi
+git status
