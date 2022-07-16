@@ -145,5 +145,10 @@ window.addEventListener("scroll", function() {
         hidden.forEach((element, i) => {
             element.classList.replace("hidden", classArr[i])
         })
+        //add grow animation to the skill-card reaching scroll position
+        const skillCard = document.querySelectorAll(".skill-card")
+        skillCard.forEach((element, i) => {
+            element.classList.replace("dummy","grow")
+        })
     }
 }, false);

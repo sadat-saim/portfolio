@@ -25,7 +25,7 @@ body {
 /*utilities*/
 
 .hidden {
-    opacity: 0;
+    visibility: hidden;
 }
 
 .color-primary {
@@ -136,6 +136,7 @@ nav ul li a {
     text-align: center;
     font-weight: 100;
     color: #FCBA28;
+    text-decoration: none;
 }
 
 nav ul li a:last-child {
@@ -202,6 +203,7 @@ main p {
     margin: 0 auto;
     font-weight: 100;
     padding-bottom: 3rem;
+    text-align: justify;
 }
 
 
@@ -223,6 +225,21 @@ main p {
     max-width: 32%;
     margin-bottom: 1rem;
     position: relative;
+    visibility: hidden;
+}
+
+.grow{
+    animation: slidex 1s ease-in-out forwards;
+}
+
+@keyframes slidex {
+    from{
+        transform: translateX(-100%) scale(0.1);
+    }
+    to{
+        visibility: visible;
+        transform: translateX(0%) scale(1);
+    }
 }
 
 .skill-card:hover {
@@ -411,8 +428,9 @@ main p {
 }
 
 .end{
-    color:rgb(36, 36, 36);
+    color:rgb(50, 48, 48);
     font-size: small;
+    margin: 0.5rem;
 }
 
 /*scroll progress bar*/
