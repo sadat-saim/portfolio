@@ -1,37 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Outfit:wght@100;400;900&display=swap');
 
-/* :root{
-    --primary-color: #FCBA28;
-    --secondary-color: #A42CE9;
-    --background-color: #000;
-    --element-color: #1F1F1F;
-    --text-color: #FFF;
-} */
-/* Light Mode */
-/* :root{
-    --primary-color: #FF06B7;
-    --secondary-color: #4B5D67;
-    --background-color: #BDF2D5;
-    --element-color: #1F1F1F;
-    --text-color: #3C2C3E;
-} */
-
 @media (prefers-color-scheme: dark) {
     :root{
-        --primary-color: #00ADB5;
-        --secondary-color: #FF2E63;
-        --background-color: #222831;
+        --primary-color: #FCBA28;
+        --secondary-color: #A42CE9;
+        --background-color: #000;
         --element-color: #1F1F1F;
-        --text-color: #EEEEEE;
+        --text-color: #FFF;
     }
     
   }
   
   @media (prefers-color-scheme: light) {
     :root{
-        --primary-color: #FF06B7;
-        --secondary-color: #4B5D67;
-        --background-color: #BDF2D5;
+        --primary-color: #FCBA28;
+        --secondary-color: #A42CE9;
+        --background-color: #FDF6EC;
         --element-color: #1F1F1F;
         --text-color: #3C2C3E;
     }
@@ -192,9 +176,6 @@ nav ul li a:last-child {
 
 /*hero section styles*/
 
-
-/* @keyframes name | duration | easing-function | delay */
-
 .hero-section {
     height: 65vh;
     max-width: 68%;
@@ -266,7 +247,7 @@ main p {
     max-width: 32%;
     margin-bottom: 1rem;
     position: relative;
-    visibility: hidden;
+    opacity: 0;
 }
 
 .grow{
@@ -280,7 +261,7 @@ main p {
         transform: translateX(-100%) scale(0.5);
     }
     to{
-        visibility: visible;
+        opacity: 1;
         transform: translateX(0%) scale(1);
     }
 }
