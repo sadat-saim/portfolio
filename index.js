@@ -100,7 +100,7 @@ let classNames = ['.name', '.section-title',
 for (let classIndex = 0; classIndex < classNames.length; classIndex++) {
     cursor.over(classNames[classIndex], {
         scale: 1.4,
-        background: '#fff'
+        background: `${secondaryColor}`
     })
 }
 
