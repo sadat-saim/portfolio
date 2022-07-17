@@ -81,14 +81,14 @@ const cursorDot = ({
 //The code above is not mine
 //owner of this code https://github.com/gaoryrt/cursor-dot
 //All codes below are mine
-
+const secondaryColor = "#393E46"
 //cursorDot options
 const cursor = cursorDot({
     diameter: 80,
     // border width
     borderWidth: 1,
     // border color
-    borderColor: '#A42CE9',
+    borderColor: `${secondaryColor}`,
     easing: 4
 })
 
@@ -106,7 +106,7 @@ for (let classIndex = 0; classIndex < classNames.length; classIndex++) {
 
 cursor.over('.hero-section', {
     scale: 1.4,
-    background: '#A42CE9'
+    background: `${secondaryColor}`
 })
 
 //scroll progress bar
