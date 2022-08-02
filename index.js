@@ -152,3 +152,22 @@ window.addEventListener("scroll", function() {
         })
     }
 }, false);
+
+//Dark mode toggle
+const mode = document.querySelector(".toggleMode")
+let root = document.documentElement;
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    // dark mode
+    let darkMode = true
+        mode.addEventListener("click", e => {            
+            if(darkMode){
+                darkMode = false
+                root.style.setProperty('--background-color', '#FDF6EC');
+                root.style.setProperty('--text-color', '#3C2C3E');
+            }else{
+                darkMode = true
+                root.style.setProperty('--background-color', '#000');
+                root.style.setProperty('--text-color', '#FFF');
+            }
+        });
+}
