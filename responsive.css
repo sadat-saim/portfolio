@@ -37,11 +37,19 @@
 }
 
 @media only screen and (max-width: 701px) {
+  .nav {
+    position: static;
+  }
   main h1,
   main h1 span {
     font-weight: 900;
     font-size: 2.5rem;
     margin-top: 10%;
+  }
+  .name {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .nav ul {
     position: fixed;
@@ -49,11 +57,12 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 50px;
-    backdrop-filter: opacity(0.8) blur(10px);
-    background-color: rgba(252, 186, 40, 0.6);
+    backdrop-filter: opacity(0.8) blur(20px);
+    background-color: rgba(252, 186, 40, 0.8);
     padding: 0.5rem;
     animation: bounceup 1.8s linear;
     animation-fill-mode: initial;
+    z-index: 999;
   }
   @keyframes bounceup {
     from {

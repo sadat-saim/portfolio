@@ -72,7 +72,7 @@ body {
 
 .container {
   width: calc(100% - 158px);
-  margin: 25px auto 5px;
+  margin: 0px auto 5px;
   max-width: 1200px;
 }
 
