@@ -1,6 +1,7 @@
 #!bash automation_git.sh
 git status
 git add .
+git status
 echo "Enter commit message:"
 read message
 git commit -m "$message"
