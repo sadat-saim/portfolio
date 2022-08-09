@@ -251,10 +251,13 @@ main p {
 }
 
 @keyframes slidex {
-  from {
+  0% {
     transform: translateX(-100%) scale(0.5);
   }
-  to {
+  70% {
+    opacity: 0.2;
+  }
+  100% {
     opacity: 1;
     transform: translateX(0%) scale(1);
   }
@@ -473,25 +476,3 @@ main p {
 body::-webkit-scrollbar {
   display: none;
 }
-
-/* .toggleMode {
-  /* position: fixed;
-  bottom: 10px;
-  right: 10px;
-  height: 50px;
-  width: 50px; */
-/* border-radius: 50%; */
-/* background: #1f1f1f;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-} */
-
-/* .toggleMode:hover {
-  background: #3c2c3e;
-}
-
-.toggleMode i {
-  color: #fff;
-} */
