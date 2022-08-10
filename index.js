@@ -79,37 +79,41 @@ const cursorDot = ({
 //The code above is not mine
 //owner of this code https://github.com/gaoryrt/cursor-dot
 //All codes below are mine
-const secondaryColor = "#393E46";
-//cursorDot options
-const cursor = cursorDot({
-  diameter: 80,
-  // border width
-  borderWidth: 1,
-  // border color
-  borderColor: `${secondaryColor}`,
-  easing: 4,
-});
+const screenWidth = screen.width;
+//Cursor only works on screen larger than 701px
+if (screenWidth > 701) {
+  const secondaryColor = "#393E46";
+  //cursorDot options
+  const cursor = cursorDot({
+    diameter: 80,
+    // border width
+    borderWidth: 1,
+    // border color
+    borderColor: `${secondaryColor}`,
+    easing: 4,
+  });
 
-let classList = [
-  ".name",
-  ".section-title",
-  ".my-skills",
-  ".projects",
-  ".contact-heading",
-  ".copyright",
-];
+  let classList = [
+    ".name",
+    ".section-title",
+    ".my-skills",
+    ".projects",
+    ".contact-heading",
+    ".copyright",
+  ];
 
-for (classes in classList) {
-  cursor.over(classList[classes], {
+  for (classes in classList) {
+    cursor.over(classList[classes], {
+      scale: 1.4,
+      background: `${secondaryColor}`,
+    });
+  }
+
+  cursor.over(".hero-section", {
     scale: 1.4,
     background: `${secondaryColor}`,
   });
 }
-
-cursor.over(".hero-section", {
-  scale: 1.4,
-  background: `${secondaryColor}`,
-});
 
 //scroll progress bar
 const Progress1 = document.getElementById("scroll-progress1");
@@ -172,7 +176,7 @@ if (
   darkMode = true;
   mode.addEventListener("click", changeMode);
 }
-  mode.addEventListener("click", changeMode);
+mode.addEventListener("click", changeMode);
 
 function changeMode(mode) {
   if (darkMode) {
