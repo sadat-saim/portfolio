@@ -40,6 +40,10 @@
   .nav {
     position: static;
   }
+  .button {
+    transform: scale(0.8);
+    margin-top: 1rem;
+  }
   main h1,
   main h1 span {
     font-weight: 900;
