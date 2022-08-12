@@ -14,9 +14,9 @@
   :root {
     --primary-color: #a42ce9;
     --secondary-color: #fcba28;
-    --background-color: #fdf6ec;
+    --background-color: #f0f0f0;
     --element-color: #1f1f1f;
-    --text-color: #3c2c3e;
+    --text-color: #1b262c;
   }
 }
 
@@ -81,7 +81,7 @@ body {
   padding: 0.5rem 0;
   border: 1px solid var(--text-color);
   max-width: 9rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   position: relative;
   cursor: pointer;
   background-color: var(--background-color);
@@ -109,6 +109,10 @@ body {
 
 a {
   text-decoration: none;
+}
+
+p {
+  font-size: 0.8rem;
 }
 
 a:hover,
@@ -413,6 +417,7 @@ main p {
 
 .project li span {
   font-weight: 100;
+  font-size: 0.9rem;
 }
 
 /*contacts section*/

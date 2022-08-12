@@ -181,8 +181,8 @@ mode.addEventListener("click", changeMode);
 function changeMode(mode) {
   if (darkMode) {
     darkMode = false;
-    root.style.setProperty("--background-color", "#FDF6EC");
-    root.style.setProperty("--text-color", "#3C2C3E");
+    root.style.setProperty("--background-color", "#F0F0F0");
+    root.style.setProperty("--text-color", "#1B262C");
     root.style.setProperty("--primary-color", "#a42ce9");
     root.style.setProperty("--secondary-color", "#fcba28");
   } else {
