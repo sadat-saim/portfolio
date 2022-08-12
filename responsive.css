@@ -31,9 +31,6 @@
   .skill-card {
     max-width: 48%;
   }
-  .footer {
-    max-width: 55%;
-  }
 }
 
 @media only screen and (max-width: 701px) {
@@ -102,9 +99,6 @@
   .skill-card {
     max-width: 100%;
   }
-  .footer {
-    max-width: 70%;
-  }
 }
 
 @media only screen and (max-width: 475px) {
@@ -116,9 +110,6 @@
     font-size: 1.5rem;
   }
   .about-me p {
-    max-width: 90%;
-  }
-  .footer {
     max-width: 90%;
   }
 }
@@ -151,10 +142,6 @@
   .project li a,
   .contacts ul li a p {
     font-size: 1rem;
-  }
-  .footer {
-    max-width: 95%;
-    padding: 1.2rem 0.3rem 0;
   }
   p,
   span {

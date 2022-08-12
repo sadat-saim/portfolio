@@ -183,10 +183,14 @@ function changeMode(mode) {
     darkMode = false;
     root.style.setProperty("--background-color", "#FDF6EC");
     root.style.setProperty("--text-color", "#3C2C3E");
+    root.style.setProperty("--primary-color", "#a42ce9");
+    root.style.setProperty("--secondary-color", "#fcba28");
   } else {
     darkMode = true;
     root.style.setProperty("--background-color", "#000");
     root.style.setProperty("--text-color", "#FFF");
+    root.style.setProperty("--primary-color", "#fcba28");
+    root.style.setProperty("--secondary-color", "#a42ce9");
   }
 }
 
