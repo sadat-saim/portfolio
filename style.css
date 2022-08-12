@@ -412,13 +412,9 @@ main p {
 }
 
 /*contacts section*/
-
-.contacts {
-  display: flex;
-}
-
 .contacts ul {
   display: flex;
+  justify-content: center;
 }
 
 .contacts ul li a i {
