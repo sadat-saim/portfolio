@@ -107,6 +107,10 @@ body {
   background-color: var(--element-color);
 }
 
+a {
+  text-decoration: none;
+}
+
 a:hover,
 i:hover {
   color: var(--secondary-color);
