@@ -36,10 +36,14 @@
 @media only screen and (max-width: 701px) {
   .nav {
     position: static;
+    background: none;
   }
   .button {
     transform: scale(0.8);
     margin-top: 1rem;
+  }
+  .name {
+    margin-left: 0;
   }
   main h1,
   main h1 span {
